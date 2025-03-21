@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哈尔滨工业大学（威海）学生科创中心</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .menu {
+            height: 130px;
+            background-color: #1A6786;
+            background-image: url("../imgs/logo.png");
+            background-repeat: no-repeat;
+            background-position: 50px center;
+            display: flex;
+            align-items: center;
+            padding-left: 200px; /* 调整左侧间距 */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .menu-item {
+            text-decoration: none;
+            font-size: 20px;
+            color: #fff;
+            margin-left: 30px;
+            transition: color 0.3s ease;
+        }
+        .menu-item:hover {
+            color: #FFD700;
+        }
+        .menu-login {
+            text-decoration: none;
+            font-size: 20px;
+            color: #fff;
+            margin-left: auto; /* 将用户登录推到最右侧 */
+            margin-right: 30px; /* 添加右侧间距 */
+            transition: color 0.3s ease;
+        }
+        .menu-login:hover {
+            color: #FFD700;
+        }
+        .header {
+            height: 100vh;
+            background-color: #6699CC;
+            color: white;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .header h1 {
+            font-size: 3em;
+            margin: 0;
+            line-height: 1.2;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #f2f4f7;
+            padding: 15px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            height: 200px;
+        }
+        .nav-item {
+            height: 231px;
+            width: 311px;
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: -70px;
+        }
+        .nav-item:hover {
+            background-color: #f0f0f0;
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .content {
+            background-color: #f2f4f7;
+            display: flex;
+            justify-content: space-between;
+            padding: 40px;
+            gap: 30px;
+        }
+        .left-column, .right-column {
+            flex: 1;
+
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+        }
+        .left-column {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .news {
+            height: 400px;
+            background-color: #fff;
+            width: 80%; /* 调整宽度比例 */
+            padding: 30px; /* 增加内边距 */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            
+        }
+
+        .announcement {
+            height: 890px;
+            background-color: #fff;
+            width: 80%; /* 调整宽度比例 */
+            padding: 30px; /* 增加内边距 */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            
+        }
+
+        .lecture {
+            height: 400px;
+            background-color: #fff;
+            width: 80%; /* 调整宽度比例 */
+            padding: 30px; /* 增加内边距 */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            
+        }
+        .news:hover, .lecture:hover, .announcement:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .news-title, .lecture-title {
+            background-color: #8FBC8F;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+        .student-style-section {
+            /* margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #F4A460;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+
+            background-color: #f2f4f7;
+            display: flex;
+            justify-content: space-between;
+            padding: 40px;
+            gap: 30px;
+
+            display: flex;
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+        }
+        .student-style-section .student-style {
+            /* background-color: transparent;
+            width: 100%;
+            text-align: center;
+            padding: 20px 0; */
+
+            height: 400px;
+            background-color: #fff;
+            width: 90%; /* 调整宽度比例 */
+            padding: 30px; /* 增加内边距 */
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .footer {
+            background-color: #2c3e50; /* 深色背景 */
+            color: #ecf0f1; /* 浅色文字 */
+            display: flex;
+            justify-content: flex-end; /* 将内容靠右对齐 */
+            align-items: flex-start;
+            padding: 40px 20px;
+            gap: 20px;
+            position: relative;
+        }
+        
+        .footer-logo {
+            position: absolute;
+            left: 20px; /* 左侧留出空间 */
+            top: 20%;
+            transform: translateY(-50%);
+            max-width: 300px; /* 将宽度放大两倍 */
+            height: auto; /* 保持宽高比 */
+        }
+        
+        .footer-item {
+            /* background-color: #34495e; 较浅的背景色 */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: left;
+            flex: 1;
+            min-width: 250px;
+            max-width: 300px; /* 限制盒子宽度 */
+            /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+            /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+        }
+        
+        /* .footer-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        } */
+        
+        .footer-item h3 {
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            color: #FFD700; /* 金色标题 */
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-links li {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        
+        .footer-links a {
+            text-decoration: none;
+            color: #ecf0f1;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: #FFD700; /* 金色悬停效果 */
+        }
+        
+        .footer-links .icon {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        
+        @media (max-width: 768px) {
+            .footer {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer-item {
+                width: 90%;
+            }
+        }
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .news, .lecture, .announcement, .student-style {
+                width: 90%;
+            }
+            .nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        a:hover {
+            color: #555;
+        }
+        .section-title {
+            position: relative;
+            font-size: 2em; /* 根据需要调整字体大小 */
+            font-weight: bold;
+            display: inline-block;
+            margin-left: 10px; /* 给竖线留出空间 */
+        }
+
+        .section-title::before {
+            content: "";
+            position: absolute;
+            left: -20px; /* 调整竖线与文字的距离 */
+            top: 4px;
+            height: 100%; /* 竖线高度与文字一致 */
+            width: 4px; /* 竖线宽度 */
+            background-color: #007bff; /* 竖线颜色（蓝色） */
+            border-radius: 2px; /* 可选：让竖线边缘圆滑 */
+        }
+    </style>
+    <link rel="shortcut icon" href="../imgs/favicon.ico"> 
+</head>
+<body>
+    <!-- 导航栏 -->
+    <div class="menu">
+        <a href="#" class="menu-login">用户登录</a>
+    </div>
+
+    <!-- 头部 -->
+    <div class="header">
+        <h1>哈尔滨工业大学（威海）学生科创中心</h1>
+    </div>
+
+    <!-- 选项卡导航 -->
+    <div class="nav">
+        <div class="nav-item">4个选项卡</div>
+        <div class="nav-item">白底黑字</div>
+        <div class="nav-item">暂时设置4个</div>
+        <div class="nav-item">一个选项一个图标</div>
+    </div>
+
+    <!-- 主体内容 -->
+    <div class="content">
+        <div class="left-column">
+            <div class="news">
+                <h2 class="section-title">比赛新闻</h2>
+                <div class="news-title"> <a href="#">新闻标题</a></div>
+            </div>
+            <div class="lecture">
+                <h2 class="section-title">校内讲座</h2>
+                <div class="lecture-title"> <a href="#">讲座标题</a></div>
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="announcement">
+                <h2 class="section-title">通知公告</h2>
+            </div>
+        </div>
+    </div>
+
+    <!-- 学生风采 -->
+    <div class="student-style-section">
+        <div class="student-style">
+            <h2 class="section-title">学生风采</h2>
+        </div>
+    </div>
+
+    <!-- 页脚 -->
+    <div class="footer">
+        <!-- 左侧 Logo -->
+        <img src="../imgs/logo.png" alt="Logo" class="footer-logo">
+        
+        <!-- 快速入口 -->
+        <div class="footer-item">
+            <h3>快速入口：</h3>
+            <ul class="footer-links">
+                <li><a href="#"><span class="icon">📚</span> 设备图书馆</a></li>
+                <li><a href="#"><span class="icon">💻</span> 正版软件申请</a></li>
+                <li><a href="#"><span class="icon">🖨️</span> 3D打印申请</a></li>
+                <li><a href="#"><span class="icon">🔬</span> 大型仪器共享</a></li>
+                <li><a href="#"><span class="icon">📄</span> 大创申请</a></li>
+                <li><a href="#"><span class="icon">👥</span> 社团招新</a></li>
+            </ul>
+        </div>
+
+        <!-- 问题与反馈 -->
+        <div class="footer-item">
+            <h3>问题与反馈</h3>
+            <p>请通过以下方式联系我们：</p>
+            <ul class="footer-links">
+                <li><a href="mailto:feedback@example.com"><span class="icon">✉️</span> 反馈邮箱</a></li>
+                <li><a href="#"><span class="icon">💬</span> 在线客服</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
