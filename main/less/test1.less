@@ -1,0 +1,128 @@
+// out: ../css/
+// 导航栏
+.bg-body-tertiary{
+    background-color: #1A6786 !important;
+}
+
+.nav-link {
+    color: #fff !important;
+}
+
+.navbar-collapse {
+    flex-grow: 0 !important;
+}
+
+.carousel{
+    .carousel-item{
+        height: 100vh !important;
+    }
+}
+
+.nav-item a {
+	position: relative;
+}
+
+.nav-item a::after{
+	content: ' ';
+	display: block;
+	height: 0px;
+	left: 2px;
+	right: 2px;
+	bottom: 1px;
+	position: absolute;
+	background: #fff;
+	font-size: 0px;
+	line-height: 0px;
+	overflow: hidden;
+	transition: height .3s;
+}
+
+.nav-item a:hover::after{
+    height: 2px;
+    font-size: 0px;
+    line-height: 0px;
+    overflow: hidden;
+}
+
+.project {
+	margin-top: 60px;
+	text-align: center;
+	.row {
+		div {
+			margin-bottom: 20px;
+			height: 200px;
+			a {
+				display: block;
+				height: 200px;
+				line-height: 200px;
+				background-color: #fff;
+				border-radius: 8px;
+			}
+		}
+	}
+}
+
+.project .row div a {
+  display: block;
+  text-align: center;
+  background-color: #f8f9fa;
+  color: #000;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.project .row div a:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.news {
+	height: 720px;
+	width:1320px;
+	margin: 0 auto; /* 水平居中 */
+	display: flex; /* 使用 Flexbox */
+	justify-content: center; /* 水平居中对齐 */
+	align-items: center; /* 垂直居中对齐 */
+}
+
+.news-container {
+    width: 1320px;
+    height: 520px;
+    border: 2px solid #1a6786;
+    margin: 20px auto;
+}
+
+.news-title-container {
+	width: 200px;
+	height: 40px;
+	margin-top: -23px;
+	margin-left: 250px;
+	background-color: #f2f4f7;
+	.news-title {
+		font-size: 25px;
+		color: #1a6786;
+		text-align: center;
+		line-height: 40px;
+	}
+}
+
+.news-content-container {
+	width: 1024px;
+	height: 576px;
+	margin-top: 20px;
+	margin-left: 148px;
+	background-image: url();
+	background-color: gray;
+	position: relative; /* 确保内部元素可以使用绝对定位 */
+
+	.new-title {
+		width: 100%;
+		position: absolute;
+		bottom: 10px; /* 距离容器底部 10px */
+		left: 10px; /* 距离容器左侧 10px */
+		font-size: 20px;
+		color: #fff; /* 根据背景色调整文字颜色 */
+		padding: 5px 10px;
+	}
+}
